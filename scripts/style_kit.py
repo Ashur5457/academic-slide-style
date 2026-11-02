@@ -27,6 +27,20 @@ def page(prs, title, n):
     return s
 
 
+def outline(prs, items, answer=None, title="Outline", n=1):
+    """items: (number, section name, one line); answer: optional sentence in a callout below the rows"""
+    s = page(prs, title, n)
+    for i, (no, name, sub_) in enumerate(items):
+        y = 150 + i * 150
+        rect(s, 72, y, 1776, 132, fill=LIGHT)
+        text(s, 100, y, 130, 132, no, size=46, bold=True, color=RED_TEXT, anchor="m")
+        text(s, 240, y, 640, 132, name, size=32, bold=True, color=WINE, anchor="m")
+        text(s, 880, y, 950, 132, sub_, size=27, color=TEXT, anchor="m")
+    if answer:
+        callout(s, 960, 150 + len(items) * 150 + 10, [answer], size=28, anchor="c")
+    return s
+
+
 def cover(prs, title_lines, subtitle, name, date, icon, alt="", title_size=50):
     s = blank_slide(prs)
     text(s, 110, 300, 1000, 220, title_lines, size=title_size, color=WINE, bold=True, anchor="m")
