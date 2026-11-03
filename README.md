@@ -43,7 +43,7 @@ mkdir -p ~/.agents/skills
 ln -s ~/.claude/skills/academic-slide-style ~/.agents/skills/academic-slide-style
 ```
 
-On Windows, use a directory junction instead (`mklink /J "%USERPROFILE%\.agents\skillscademic-slide-style" "%USERPROFILE%\.claude\skillscademic-slide-style"` in cmd). 在 Windows 改用 cmd 的 `mklink /J`。
+On Windows, use a directory junction instead (`mklink /J "%USERPROFILE%\.agents\skills\academic-slide-style" "%USERPROFILE%\.claude\skills\academic-slide-style"` in cmd, after creating `%USERPROFILE%\.agents\skills`). 在 Windows 改用 cmd 的 `mklink /J`（先建立 `%USERPROFILE%\.agents\skills`）。
 
 **Sample decks / 範例**
 
