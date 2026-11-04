@@ -1,0 +1,5 @@
+interface:
+  display_name: "Academic slide style"
+  short_description: "Academic decks in English or Traditional Chinese: burgundy title bar, red and grey emphasis, cover schematic from the talk"
+policy:
+  allow_implicit_invocation: true
